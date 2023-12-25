@@ -6,3 +6,10 @@
   <%#= render partial: "cats/cat",
               locals: { cat: @cat } %>
 <%# end %>
+
+<%= turbo_stream_flash %>
+
+<%# renderを省略しない場合 %>
+<%#= turbo_stream.update "flash" %>
+  <%#= render partial: "flash" %>
+<%# end%>
