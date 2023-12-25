@@ -1,0 +1,8 @@
+<%= turbo_stream.replace @cat %>  <%# turbo_stream.replaceはturbo-railsが用意したビューヘルパーであり、内部的にはパーシャルをrenderする #>
+
+<%# renderを省略しない場合は、以下のようなコードになる %>
+<%# partialとlocalsは@catから推測できるため、通常は省略される %>
+<%#= turbo_stream.replace @cat do %>
+  <%#= render partial: "cats/cat",
+              locals: { cat: @cat } %>
+<%# end %>
