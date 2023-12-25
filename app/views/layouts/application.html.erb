@@ -14,12 +14,10 @@
     <div class="vh-100">
       <div class="container-fluid">
         <div class="row">
-
           <div class="ps-0" style="width: 200px;"></div>
           <div class="ps-0 position-fixed" style="width: 200px;">
             <%= render "sidebar" %>
           </div>
-
           <div class="col my-4">
             <div id="flash">
               <%= render "flash" %>
@@ -29,5 +27,10 @@
         </div>
       </div>
     </div>
+
+    <%# 編集・登録リンクのTurbo Framesのターゲット %>
+    <%# 編集・登録リンクをクリックすると、ここにサーバーから取得したモーダルが置換される %>
+    <%# モーダルの置き場所はどこでもいいので、とりあえず<body>の一番下に置いておく %>
+    <%= turbo_frame_tag "modal" %>
   </body>
 </html>
